@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+   
+  <parent>
+    <groupId>com.citic.holding.weixin</groupId>
+    <artifactId>weixin-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent> 
+  <groupId>com.citic.holding.weixin</groupId>
+  <artifactId>weixin-web</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>weixin-web</name>
+
+    <build>
+        <plugins>
+               <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>  
+                <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <port>9080</port>
+                    <path>/weixin-web</path>
+                    <uriEncoding>UTF-8</uriEncoding>
+                    <finalName>weixin-web</finalName>
+                    <server>tomcat7</server>
+                </configuration>
+            </plugin>
+        </plugins>
+         
+        <finalName>weixin-web</finalName>
+    </build>
+</project>
