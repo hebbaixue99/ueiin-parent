@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+	<description>my app taglib</description>
+	<display-name>myapp tag</display-name>
+	<tlib-version>1.1</tlib-version>
+	<short-name>myapp</short-name>
+	<tag>
+		<name>jsoup</name>
+		<tag-class>
+			com.ihandy.wx.tag.JsoupTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>
+			内容转换去掉html
+		</description>
+  		<attribute>
+			<description>
+				替换的内容
+			</description>
+			<name>content</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

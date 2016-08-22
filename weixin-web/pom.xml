@@ -5,10 +5,9 @@
     <groupId>com.citic.holding.weixin</groupId>
     <artifactId>weixin-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../weixin-parent</relativePath>
   </parent> 
-  <groupId>com.citic.holding.weixin</groupId>
   <artifactId>weixin-web</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>weixin-web</name>
 
