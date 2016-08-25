@@ -1,212 +1,423 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="utf-8">
-		<title>中信易家</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<head>
+<meta charset="utf-8">
+<title>中信易家</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-		<link rel="stylesheet" href="./css/mui.min.css">
-		<style>
-			html,
-			body {
-				background-color: #efeff4;
-			}
-			p {
-				text-indent: 22px;
-			}
-			span.mui-icon {
-				font-size: 14px;
-				color: #007aff;
-				margin-left: -15px;
-				padding-right: 10px;
-			}
-			 
-			.title {
-				margin: 35px 15px 10px;
-			}
-			.title+.content {
-				margin: 10px 15px 35px;
-				color: #bbb;
-				text-indent: 1em;
-				font-size: 14px;
-				line-height: 24px;
-			}
-			input {
-				color: #000;
-			}
-			/*右侧侧滑 */
-			.mui-off-canvas-left  {
-                 
-                width:50%;
-            }
-                      
+<link rel="stylesheet" href="./css/mui.min.css">
+<style>
+html, body {
+	background-color: #efeff4;
+}
 
-            .mui-off-canvas-right  {
-                
-                width:50%;
-            } 
-		</style>
-	</head>
+p {
+	text-indent: 22px;
+}
 
-	<body>
-		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
-			<!--侧滑菜单部分-->
-			<aside id="offCanvasSide" class="mui-off-canvas-left">
-				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
-				<div class="title">
-				商品分类
-			    </div>
-					<div class="mui-scroll">
-						<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									食品饮料
-								</a>
-							</li>
-							 
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									图书
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									手机数码
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									家具家装
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									珠宝配饰
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									投资收藏
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									汽车
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									旅游酒店
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									个护化妆
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									健康医疗
-								</a>
-							</li>
-							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right">
-									地产
-								</a>
-							</li>
-						</ul>
-					</div>
+span.mui-icon {
+	font-size: 14px;
+	color: #007aff;
+	margin-left: -15px;
+	padding-right: 10px;
+}
+
+.title {
+	margin: 35px 15px 10px;
+}
+
+.title+.content {
+	margin: 10px 15px 35px;
+	color: #bbb;
+	text-indent: 1em;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+input {
+	color: #000;
+}
+/*右侧侧滑 */
+.mui-off-canvas-left {
+	width: 50%;
+}
+
+.mui-off-canvas-right {
+	width: 50%;
+}
+</style>
+<style>
+.title {
+	margin: 20px 15px 10px;
+	color: #6d6d72;
+	font-size: 15px;
+}
+
+.oa-contact-cell.mui-table .mui-table-cell {
+	padding: 11px 0;
+	vertical-align: middle;
+}
+
+.oa-contact-cell {
+	position: relative;
+	margin: -11px 0;
+}
+
+.oa-contact-avatar {
+	width: 75px;
+}
+
+.oa-contact-avatar img {
+	border-radius: 50%;
+}
+
+.oa-contact-content {
+	width: 100%;
+}
+
+.oa-contact-name {
+	margin-right: 20px;
+}
+
+.oa-contact-name, oa-contact-position {
+	float: left;
+}
+</style>
+</head>
+
+<body>
+	<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+		<!--侧滑菜单部分-->
+		<aside id="offCanvasSide" class="mui-off-canvas-left">
+			<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+				<div class="title">商品分类</div>
+				<div class="mui-scroll">
+					<ul
+						class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+						<li class="mui-table-view-cell"><a class="mui-navigate-right">
+								食品饮料 </a></li>
+
+						<li class="mui-table-view-cell"><a class="mui-navigate-right">
+								图书 </a></li>
+						<li class="mui-table-view-cell"><a class="mui-navigate-right">
+								手机数码 </a></li>
+						<li class="mui-table-view-cell"><a class="mui-navigate-right">
+								家具家装 </a></li>
+						<li class="mui-table-view-cell"><a class="mui-navigate-right">
+								珠宝配饰 </a></li>
+						<li class="mui-table-view-cell"><a class="mui-navigate-right">
+								投资收藏 </a></li>
+						<li class="mui-table-view-cell"><a class="mui-navigate-right">
+								汽车 </a></li>
+						<li class="mui-table-view-cell"><a class="mui-navigate-right">
+								旅游酒店 </a></li>
+						<li class="mui-table-view-cell"><a class="mui-navigate-right">
+								个护化妆 </a></li>
+						<li class="mui-table-view-cell"><a class="mui-navigate-right">
+								健康医疗 </a></li>
+						<li class="mui-table-view-cell"><a class="mui-navigate-right">
+								地产 </a></li>
+					</ul>
 				</div>
-			</aside>
-			<!--主界面部分-->
-			<div class="mui-inner-wrap">
-				<header class="mui-bar mui-bar-nav">
-					<a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
-					<a class="mui-action-back mui-btn mui-btn-link mui-pull-right">关闭</a>
-					<h1 class="mui-title">div模式右滑菜单</h1>
-				</header>
-				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
-					<div class="mui-scroll">
-						<div class="mui-content-padded">
-							<p>这是可拖动式右滑导航示例，主页面和菜单在一个HTML文件中， 优点是支持拖动手势（跟手），缺点是不支持菜单内容在多页面的复用； 当前页面为主界面，你可以在主界面放置任何内容； 打开侧滑菜单有多种方式： 1、在当前页面向右拖动； 2、点击页面左上角的
-								<span class="mui-icon mui-icon-bars"></span> 图标； 3、通过JS API触发（例如点击如下蓝色按钮体验）；
-								<span class="android-only">4、Android手机按menu键；</span>
-							</p>
-							<p style="padding: 5px 20px;margin-bottom: 5px;">
-								<button id="offCanvasShow" type="button" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 10px;">
-									显示侧滑菜单
-								</button>
-							</p>
-							<p>侧滑菜单的移动动画，支持多种效果，切换如下选项体验不同动画效果：</p>
+			</div>
+		</aside>
+		<!--主界面部分-->
+		<div class="mui-inner-wrap">
+			<header class="mui-bar mui-bar-nav">
+				<a href="#offCanvasSide"
+					class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a> <a
+					class="mui-action-back mui-btn mui-btn-link mui-pull-right">关闭</a>
+				<h1 class="mui-title">div模式右滑菜单</h1>
+			</header>
 
+			<div id="offCanvasContentScroll"
+				class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="mui-content-padded">
+
+
+
+						<div class="mui-content">
+							<div id="tabbar" class="mui-control-content mui-active">
+								<div id="slider" class="mui-slider">
+									<div class="mui-slider-group mui-slider-loop">
+										<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+										<div class="mui-slider-item mui-slider-item-duplicate">
+											<a href="#"> <img src="./images/yuantiao.jpg">
+												<p class="mui-slider-title">静静看这世界</p>
+											</a>
+										</div>
+										<div class="mui-slider-item">
+											<a href="#"> <img src="./images/shuijiao.jpg">
+												<p class="mui-slider-title">幸福就是可以一起睡觉</p>
+											</a>
+										</div>
+										<div class="mui-slider-item">
+											<a href="#"> <img src="./images/muwu.jpg">
+												<p class="mui-slider-title">想要一间这样的木屋，静静的喝咖啡</p>
+											</a>
+										</div>
+										<div class="mui-slider-item">
+											<a href="#"> <img src="./images/cbd.jpg">
+												<p class="mui-slider-title">Color of SIP CBD</p>
+											</a>
+										</div>
+										<div class="mui-slider-item mui-slider-item-duplicate">
+											<a href="#"> <img src="./images/yuantiao.jpg">
+												<p class="mui-slider-title">静静看这世界</p>
+											</a>
+										</div>
+										<div class="mui-slider-item">
+											<a href="#"> <img src="./images/shuijiao.jpg">
+												<p class="mui-slider-title">幸福就是可以一起睡觉</p>
+											</a>
+										</div>
+
+									</div>
+									<div class="mui-slider-indicator mui-text-right">
+										<div class="mui-indicator mui-active"></div>
+										<div class="mui-indicator"></div>
+										<div class="mui-indicator"></div>
+										<div class="mui-indicator"></div>
+									</div>
+								</div>
+
+							</div>
+							<div id="tabbar-with-chat" class="mui-control-content">
+								<div class="title">这是div模式选项卡中的第2个子页面，该页面展示一个消息列表</div>
+
+								<ul class="mui-table-view mui-table-view-chevron">
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 1</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 2</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 3</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 4</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 5</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 6</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 7</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 8</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 9</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 10</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 11</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 12</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 13</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 14</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 15</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 16</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 17</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 18</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 19</a></li>
+									<li class="mui-table-view-cell"><a href=""
+										class="mui-navigate-right">Item 20</a></li>
+								</ul>
+
+							</div>
+							<div id="tabbar-with-contact" class="mui-control-content">
+								<div class="title">这是div模式选项卡中的第3个子页面，该页面展示一个通讯录示例.</div>
+								<ul
+									class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+									<li class="mui-table-view-cell">
+										<div class="mui-slider-cell">
+											<div class="oa-contact-cell mui-table">
+												<div class="oa-contact-avatar mui-table-cell">
+													<img src="./images/60x60.gif" />
+												</div>
+												<div class="oa-contact-content mui-table-cell">
+													<div class="mui-clearfix">
+														<h4 class="oa-contact-name">叶文洁</h4>
+														<span class="oa-contact-position mui-h6">董事长</span>
+													</div>
+													<p class="oa-contact-email mui-h6">yewenjie@sina.com</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-slider-cell">
+											<div class="oa-contact-cell mui-table">
+												<div class="oa-contact-avatar mui-table-cell">
+													<img src="./images/60x60.gif" />
+												</div>
+												<div class="oa-contact-content mui-table-cell">
+													<div class="mui-clearfix">
+														<h4 class="oa-contact-name">艾AA</h4>
+														<span class="oa-contact-position mui-h6">总经理</span>
+													</div>
+													<p class="oa-contact-email mui-h6">aaa@163.com</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-slider-cell">
+											<div class="oa-contact-cell mui-table">
+												<div class="oa-contact-avatar mui-table-cell">
+													<img src="./images/60x60.gif" />
+												</div>
+												<div class="oa-contact-content mui-table-cell">
+													<div class="mui-clearfix">
+														<h4 class="oa-contact-name">罗辑</h4>
+														<span class="oa-contact-position mui-h6">员工</span>
+													</div>
+													<p class="oa-contact-email mui-h6">luoji@126.com</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-slider-cell">
+											<div class="oa-contact-cell mui-table">
+												<div class="oa-contact-avatar mui-table-cell">
+													<img src="./images/60x60.gif" />
+												</div>
+												<div class="oa-contact-content mui-table-cell">
+													<div class="mui-clearfix">
+														<h4 class="oa-contact-name">云天明</h4>
+														<span class="oa-contact-position mui-h6">员工</span>
+													</div>
+													<p class="oa-contact-email mui-h6">ytm@163.com</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-slider-cell">
+											<div class="oa-contact-cell mui-table">
+												<div class="oa-contact-avatar mui-table-cell">
+													<img src="./images/60x60.gif" />
+												</div>
+												<div class="oa-contact-content mui-table-cell">
+													<div class="mui-clearfix">
+														<h4 class="oa-contact-name">史强</h4>
+														<span class="oa-contact-position mui-h6">员工</span>
+													</div>
+													<p class="oa-contact-email mui-h6">shiqiang@gmail.com</p>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div id="tabbar-with-map" class="mui-control-content">
+								<div class="title">这是div模式选项卡中的第4个子页面，该页面展示一个常见的设置示例.</div>
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell"><a
+										class="mui-navigate-right"> 新消息通知 </a></li>
+									<li class="mui-table-view-cell"><a
+										class="mui-navigate-right"> 隐私 </a></li>
+									<li class="mui-table-view-cell"><a
+										class="mui-navigate-right"> 通用 </a></li>
+								</ul>
+								<ul class="mui-table-view" style="margin-top: 25px;">
+									<li class="mui-table-view-cell"><a
+										class="mui-navigate-right"> 关于mui </a></li>
+								</ul>
+								<ul class="mui-table-view" style="margin-top: 25px;">
+									<li class="mui-table-view-cell"><a
+										style="text-align: center; color: #FF3B30;"> 退出登录 </a></li>
+								</ul>
+							</div>
 						</div>
-
-						<form class="mui-input-group" style="margin-bottom: 15px;">
-							<div class="mui-input-row mui-radio">
-								<label>主界面移动、菜单不动</label>
-								<input name="style" type="radio" checked="" value="main-move">
-							</div>
-							<div class="mui-input-row mui-radio">
-								<label>主界面不动、菜单移动</label>
-								<input name="style" type="radio" value="menu-move">
-							</div>
-							<div class="mui-input-row mui-radio mui-hidden" id="move-togger">
-								<label>整体移动</label>
-								<input name="style" type="radio" value="all-move">
-							</div>
-							<div class="mui-input-row mui-radio">
-								<label>缩放式侧滑（类手机QQ）</label>
-								<input name="style" type="radio" value="main-move-scalable">
-							</div>
-						</form>
-
 					</div>
 				</div>
-				<!-- off-canvas backdrop -->
-				<div class="mui-off-canvas-backdrop"></div>
 			</div>
 		</div>
-		<script src="./js/mui.min.js"></script>
-		<script>
-			mui.init();
-			 //侧滑容器父节点
-			var offCanvasWrapper = mui('#offCanvasWrapper');
-			 //主界面容器
-			var offCanvasInner = offCanvasWrapper[0].querySelector('.mui-inner-wrap');
-			 //菜单容器
-			var offCanvasSide = document.getElementById("offCanvasSide");
-			if (!mui.os.android) {
-				document.getElementById("move-togger").classList.remove('mui-hidden');
-				var spans = document.querySelectorAll('.android-only');
-				for (var i = 0, len = spans.length; i < len; i++) {
-					spans[i].style.display = "none";
-				}
+		<!-- off-canvas backdrop -->
+		<div class="mui-off-canvas-backdrop"></div>
+	</div>
+
+
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item mui-active" href="#tabbar"> <span
+			class="mui-icon mui-icon-home"></span> <span class="mui-tab-label">首页</span>
+		</a> <a class="mui-tab-item" href="#tabbar-with-chat"> <span
+			class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+			<span class="mui-tab-label">消息</span>
+		</a> <a class="mui-tab-item" href="#tabbar-with-contact"> <span
+			class="mui-icon mui-icon-contact"></span> <span class="mui-tab-label">通讯录</span>
+		</a>
+		<!--<a class="mui-tab-item" href="#tabbar-with-map">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>-->
+		<a id ="setting" class="mui-tab-item" href="./examples/setting.html"> <span
+			class="mui-icon mui-icon-gear"></span> <span class="mui-tab-label">设置</span>
+		</a>
+	</nav>
+
+
+	<script src="./js/mui.min.js"></script>
+	<script>
+		mui.init();
+		var slider = mui("#slider");
+		slider.slider({
+			interval : 5000
+		});
+
+		//侧滑容器父节点
+		var offCanvasWrapper = mui('#offCanvasWrapper');
+		//主界面容器
+		var offCanvasInner = offCanvasWrapper[0]
+				.querySelector('.mui-inner-wrap');
+		//菜单容器
+		var offCanvasSide = document.getElementById("offCanvasSide");
+		/*if (!mui.os.android) {
+			document.getElementById("move-togger").classList
+					.remove('mui-hidden');
+			var spans = document.querySelectorAll('.android-only');
+			for (var i = 0, len = spans.length; i < len; i++) {
+				spans[i].style.display = "none";
 			}
-			 //移动效果是否为整体移动
-			var moveTogether = false;
-			 //侧滑容器的class列表，增加.mui-slide-in即可实现菜单移动、主界面不动的效果；
-			var classList = offCanvasWrapper[0].classList;
-			 //变换侧滑动画移动效果；
-			mui('.mui-input-group').on('change', 'input', function() {
-				if (this.checked) {
-					offCanvasSide.classList.remove('mui-transitioning');
-					offCanvasSide.setAttribute('style', '');
-					classList.remove('mui-slide-in');
-					classList.remove('mui-scalable');
-					switch (this.value) {
+		}*/
+		//移动效果是否为整体移动
+		var moveTogether = false;
+		//侧滑容器的class列表，增加.mui-slide-in即可实现菜单移动、主界面不动的效果；
+		var classList = offCanvasWrapper[0].classList;
+		//变换侧滑动画移动效果；
+		mui('.mui-input-group').on(
+				'change',
+				'input',
+				function() {
+					if (this.checked) {
+						offCanvasSide.classList.remove('mui-transitioning');
+						offCanvasSide.setAttribute('style', '');
+						classList.remove('mui-slide-in');
+						classList.remove('mui-scalable');
+						switch (this.value) {
 						case 'main-move':
 							if (moveTogether) {
 								//仅主内容滑动时，侧滑菜单在off-canvas-wrap内，和主界面并列
-								offCanvasWrapper[0].insertBefore(offCanvasSide, offCanvasWrapper[0].firstElementChild);
+								offCanvasWrapper[0].insertBefore(offCanvasSide,
+										offCanvasWrapper[0].firstElementChild);
 							}
 							break;
 						case 'main-move-scalable':
 							if (moveTogether) {
 								//仅主内容滑动时，侧滑菜单在off-canvas-wrap内，和主界面并列
-								offCanvasWrapper[0].insertBefore(offCanvasSide, offCanvasWrapper[0].firstElementChild);
+								offCanvasWrapper[0].insertBefore(offCanvasSide,
+										offCanvasWrapper[0].firstElementChild);
 							}
 							classList.add('mui-scalable');
 							break;
@@ -216,32 +427,43 @@
 						case 'all-move':
 							moveTogether = true;
 							//整体滑动时，侧滑菜单在inner-wrap内
-							offCanvasInner.insertBefore(offCanvasSide, offCanvasInner.firstElementChild);
+							offCanvasInner.insertBefore(offCanvasSide,
+									offCanvasInner.firstElementChild);
 							break;
+						}
+						offCanvasWrapper.offCanvas().refresh();
 					}
-					offCanvasWrapper.offCanvas().refresh();
-				}
-			});
-			 //主界面‘显示侧滑菜单’按钮的点击事件
-			document.getElementById('offCanvasShow').addEventListener('tap', function() {
-				offCanvasWrapper.offCanvas('show');
-			});
-			 //菜单界面，‘关闭侧滑菜单’按钮的点击事件
-			document.getElementById('offCanvasHide').addEventListener('tap', function() {
-				offCanvasWrapper.offCanvas('close');
-			});
-			 //主界面和侧滑菜单界面均支持区域滚动；
-			mui('#offCanvasSideScroll').scroll();
-			mui('#offCanvasContentScroll').scroll();
-			 //实现ios平台原生侧滑关闭页面；
-			if (mui.os.plus && mui.os.ios) {
-				mui.plusReady(function() { //5+ iOS暂时无法屏蔽popGesture时传递touch事件，故该demo直接屏蔽popGesture功能
-					plus.webview.currentWebview().setStyle({
-						'popGesture': 'none'
-					});
 				});
-			}
-		</script>
-	</body>
+		//主界面‘显示侧滑菜单’按钮的点击事件
+	/*	document.getElementById('offCanvasShow').addEventListener('tap',
+				function() {
+					offCanvasWrapper.offCanvas('show');
+				});*/
+		
+		//设置按钮的点击事件
+		document.getElementById('setting').addEventListener('tap',
+				function() {
+			 mui.openWindow({
+				    url:"./examples/setting.html",
+				    id: "settings" 
+				})
+				});
+		//菜单界面，‘关闭侧滑菜单’按钮的点击事件
+		/*document.getElementById('offCanvasHide').addEventListener('tap', function() {
+			offCanvasWrapper.offCanvas('close');
+		});*/
+		//主界面和侧滑菜单界面均支持区域滚动；
+		mui('#offCanvasSideScroll').scroll();
+		mui('#offCanvasContentScroll').scroll();
+		//实现ios平台原生侧滑关闭页面；
+		if (mui.os.plus && mui.os.ios) {
+			mui.plusReady(function() { //5+ iOS暂时无法屏蔽popGesture时传递touch事件，故该demo直接屏蔽popGesture功能
+				plus.webview.currentWebview().setStyle({
+					'popGesture' : 'none'
+				});
+			});
+		}
+	</script>
+</body>
 
 </html>
