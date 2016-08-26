@@ -1,0 +1,203 @@
+ 
+.search_form {
+    position:relative;
+    float:left;
+    width:  85%;
+	height: 44px;
+	margin: 2px 10px 2px 10px;
+	display: inline-block;
+}
+.sdiv{
+width:100%;
+float:left;
+height:50px;
+
+}
+.sinput {
+	float: left;
+	width: 90%;
+	height: 21px;
+	line-height: 21px;
+	padding: 4px 0px;
+}
+
+.sbtn {
+    marging: 100px 10px 2px 10px;
+	float: left;
+	width: 20%;
+	height: 40px;
+	padding: 50px 12px;
+	margin-left: -1px;
+	border-radius: 0 2px 2px 0;
+	border: 1px solid #4d90fe;
+	background-color: #4d90fe;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	vertical-align: middle;
+	color: #f3f7fc;
+ 
+}
+ 
+html, body {
+	background-color: #efeff4;
+}
+
+p {
+	text-indent: 22px;
+}
+
+span.mui-icon {
+	font-size: 14px;
+	color: #007aff;
+	margin-left: -15px;
+	padding-right: 10px;
+}
+
+.title {
+	margin: 35px 15px 10px;
+}
+
+.title+.content {
+	margin: 10px 15px 35px;
+	color: #bbb;
+	text-indent: 1em;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+input {
+	color: #000;
+}
+/*”“≤‡≤‡ª¨ */
+.mui-off-canvas-left {
+	width: 50%;
+}
+
+.mui-off-canvas-right {
+	width: 50%;
+}
+ 
+.title {
+	margin: 20px 15px 10px;
+	color: #6d6d72;
+	font-size: 15px;
+}
+
+.oa-contact-cell.mui-table .mui-table-cell {
+	padding: 11px 0;
+	vertical-align: middle;
+}
+
+.oa-contact-cell {
+	position: relative;
+	margin: -11px 0;
+}
+
+.oa-contact-avatar {
+	width: 75px;
+}
+
+.oa-contact-avatar img {
+	border-radius: 50%;
+}
+
+.oa-contact-content {
+	width: 100%;
+}
+
+.oa-contact-name {
+	margin-right: 20px;
+}
+
+.oa-contact-name, oa-contact-position {
+	float: left;
+}
+
+.mui-slider-item img {
+	height: 10rem
+}
+element.style {
+}
+.mui-grid-view.mui-grid-9 .mui-media {
+color: #797979;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+margin: 0;
+padding: 11px 15px;
+vertical-align: top;
+border-right: 1px solid #eee;
+border-bottom: 1px solid #eee;
+}
+.mui-table-view.mui-grid-view .mui-table-view-cell {
+font-size: 17px;
+display: inline-block;
+margin-right: -4px;
+padding: 10px 0 0 14px;
+text-align: center;
+vertical-align: middle;
+background: 0 0;
+}
+.mui-table-view .mui-media, .mui-table-view .mui-media-body {
+overflow: hidden;
+}
+.mui-table-view-cell {
+position: relative;
+overflow: hidden;
+padding: 11px 15px;
+-webkit-touch-callout: none;
+}
+
+.mui-icon{
+	margin-left: 0px;
+    padding-right: 0px;
+}
+
+.mui-col-sm-3 {
+width: 25%;
+}
+ 
+.mui-icon-sty{
+    width:72px;
+	height:72px;
+    background-size: 72px;	
+}
+.mui-icon-sty01{
+	background: url(http://wx.ecitic.com/static/images/icon03.png) no-repeat;  
+	background-size: 72px; 
+}
+.mui-icon-sty02{
+	background: url(http://wx.ecitic.com/static/images/icon04.png) no-repeat;
+    background-size: 72px;
+}
+.mui-icon-sty03{
+	background: url(http://wx.ecitic.com/static/images/icon05.png) no-repeat;
+    background-size: 72px;
+}
+.mui-icon-sty15{
+	background: url(http://wx.ecitic.com/static/images/huafeicz.png) no-repeat;
+	background-size: 72px;
+    
+}
+.indexEnter {
+width: 99.75%;
+margin: 0 auto;
+margin-bottom: 10px;
+position: relative;
+}
+.indexEnter span.type {
+width: 79px;
+height: 27px;
+line-height: 23px;
+padding-left: 3px;
+position: absolute;
+left: 0px;
+top: 3px;
+font-size: 16px;
+color: #fff;
+background: url(http://wx.ecitic.com/static/images/bg01.png) no-repeat;
+background-size: 79px;
+}
+.indexEnter img {
+width: 90%;
+}

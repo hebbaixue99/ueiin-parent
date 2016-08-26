@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Hello MUI</title>
+		<title>中信e家</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -201,8 +201,8 @@
 								<a class="mui-navigate-right" href="#account">
 									<img class="mui-media-object mui-pull-left head-img" id="head-img" src="">
 									<div class="mui-media-body">
-										Hello MUI
-										<p class='mui-ellipsis'>账号:hellomui</p>
+									    中信e家
+										<p class='mui-ellipsis'>账号:tzg</p>
 									</div>
 								</a>
 							</li>
@@ -225,7 +225,7 @@
 						</ul>
 						<ul class="mui-table-view mui-table-view-chevron">
 							<li class="mui-table-view-cell">
-								<a href="#about" class="mui-navigate-right">关于MUI <i class="mui-pull-right update">V3.3.0</i></a>
+								<a href="#about" class="mui-navigate-right">关于中信e家 <i class="mui-pull-right update">V3.3.0</i></a>
 							</li>
 						</ul>
 						<ul class="mui-table-view">
@@ -258,21 +258,21 @@
 							</a>
 							</li>
 							<li class="mui-table-view-cell">
-								<a>姓名<span class="mui-pull-right">Hbuilder</span></a>
+								<a>姓名<span class="mui-pull-right">田志国</span></a>
 							</li>
 							<li class="mui-table-view-cell">
-								<a>HBuilder账号<span class="mui-pull-right">hbuilder@dcloud.io</span></a>
+								<a>中信e家账号<span class="mui-pull-right">tianzg3@citic.com</span></a>
 							</li>
 						</ul>
 						<ul class="mui-table-view">
 							<li class="mui-table-view-cell">
-								<a>QQ号<span class="mui-pull-right">88888888</span></a>
+								<a>QQ号<span class="mui-pull-right">715012331</span></a>
 							</li>
 							<li class="mui-table-view-cell">
-								<a>手机号<span class="mui-pull-right">18601234567</span></a>
+								<a>手机号<span class="mui-pull-right">13671326787</span></a>
 							</li>
 							<li class="mui-table-view-cell">
-								<a>邮箱地址<span class="mui-pull-right">hbuilder@dcloud.io</span></a>
+								<a>邮箱地址<span class="mui-pull-right">tianzg3@citic.com</span></a>
 							</li>
 						</ul>
 					</div>
@@ -412,16 +412,16 @@
 									<div class="mui-switch-handle"></div>
 								</div>
 							</li>
-							<li class="mui-table-view-divider">开启后，为你推荐已经开通HBuilder的手机联系人</li>
+							<li class="mui-table-view-divider">开启后，为你推荐已经注册中信e家的手机联系人</li>
 						</ul>
 						<ul class="mui-table-view">
 							<li class="mui-table-view-cell">
-								通过HBuilder账号搜索到我
+								通过中信e家账号搜索到我
 								<div class="mui-switch mui-active mui-switch-mini">
 									<div class="mui-switch-handle"></div>
 								</div>
 							</li>
-							<li class="mui-table-view-divider">关闭后，其他用户将不能通过HBuilder号搜索到你</li>
+							<li class="mui-table-view-divider">关闭后，其他用户将不能通过中信e家账号搜索到你</li>
 						</ul>
 
 					</div>
@@ -467,7 +467,7 @@
 				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
 					<span class="mui-icon mui-icon-left-nav"></span>设置
 				</button>
-				<h1 class="mui-center mui-title">关于MUI</h1>
+				<h1 class="mui-center mui-title">关于中信e家</h1>
 			</div>
 			<div class="mui-page-content">
 				<div class="mui-scroll-wrapper">
@@ -500,7 +500,7 @@
 		<div id="feedback" class="mui-page feedback">
 			<div class="mui-navbar-inner mui-bar mui-bar-nav">
 				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
-					<span class="mui-icon mui-icon-left-nav"></span>关于MUI
+					<span class="mui-icon mui-icon-left-nav"></span>关于中信e家
 				</button>
 				<button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">发送</button>
 				<h1 class="mui-center mui-title">问题反馈</h1>
@@ -645,11 +645,11 @@
 					scene: ex
 				}
 			};
-			msg.href = "http://www.dcloud.io/hellomui/";
-			msg.title = "最接近原生APP体验的高性能前端框架";
-			msg.content = "我正在体验HelloMUI，果然很流畅，基本看不出和原生App的差距";
+			msg.href = "http://wx.ecitic.com";
+			msg.title = "中信集团旗下的电子商务平台";
+			msg.content = "我正在体验体验中信e家的电商平台，果然很流畅";
 			if (~share.id.indexOf('weibo')) {
-				msg.content += "；体验地址：http://www.dcloud.io/hellomui/";
+				msg.content += "；体验地址：http://wx.ecitic.com";
 			}
 			msg.thumbs = ["_www/images/logo.png"];
 			share.send(msg, function() {
@@ -686,7 +686,7 @@
 		//		
 		//检查更新
 		document.getElementById("update").addEventListener('tap', function() {
-			var server = "http://www.dcloud.io/check/update"; //获取升级描述文件服务器地址
+			var server = "http://wx.ecitic.com/check/update"; //获取升级描述文件服务器地址
 			mui.getJSON(server, {
 				"appid": plus.runtime.appid,
 				"version": plus.runtime.version,
@@ -699,7 +699,7 @@
 						}
 					}, data.title, ["立即更新", "取　　消"]);
 				} else {
-					mui.toast('Hello MUI 已是最新版本~')
+					mui.toast('中信e家 已是最新版本~')
 				}
 			});
 		});
