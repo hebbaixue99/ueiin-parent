@@ -1997,7 +1997,7 @@ Function.prototype.bind = Function.prototype.bind || function(to) {
 		document.body.appendChild(wrapper);
 		//目前仅处理微信
 		$.os.wechat && handleScroll(wrapper, iframe);
-	};
+	};    
     $.openSubPage = function(options) {
          var wrappers = mui('.mui-iframe-wrapper');
          if(wrappers!==null)
