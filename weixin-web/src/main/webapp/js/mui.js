@@ -24,7 +24,7 @@ var mui = (function(document, undefined) {
 				return wrap($.slice.call(selector), null);
 			} else {
 				return wrap([selector], null);
-			}
+			} 
 		if (typeof selector === 'function') 
 			return $.ready(selector);
 		if (typeof selector === 'string') {
