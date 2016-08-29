@@ -1963,10 +1963,14 @@ Function.prototype.bind = Function.prototype.bind || function(to) {
 			var subpages = options.subpages || [];
 			if (!$.os.plus && subpages.length) {
 				//暂时只处理单个subpage。后续可以考虑支持多个subpage
-				createIframe(subpages[0]);
+				for(var i=0;i<subpages.length;i++)
+				{
+				 createIframe(subpages[i]);
+				}
 			}
 		}
 	});
+	
 	var createIframe = function(options) {
 		var wrapper = document.createElement('div');
 		wrapper.className = 'mui-iframe-wrapper';
@@ -1977,18 +1981,43 @@ Function.prototype.bind = Function.prototype.bind || function(to) {
 		if (typeof styles.bottom !== 'string') {
 			styles.bottom = '0px';
 		}
+		if (typeof styles.display!=='string')
+		{
+			styles.display='none';
+		}
 		wrapper.style.top = styles.top;
 		wrapper.style.bottom = styles.bottom;
+		wrapper.style.display= styles.display;
 		var iframe = document.createElement('iframe');
 		iframe.src = options.url;
 		iframe.id = options.id || options.url;
 		iframe.name = iframe.id;
+		wrapper.id = wrapper.className+'-'+iframe.id;
 		wrapper.appendChild(iframe);
 		document.body.appendChild(wrapper);
 		//目前仅处理微信
 		$.os.wechat && handleScroll(wrapper, iframe);
 	};
-
+    $.openSubPage = function(options) {
+         var wrappers = mui('.mui-iframe-wrapper');
+         if(wrappers!==null)
+         {
+         	for(var i=0; i<wrappers.length;i++)
+         	{
+         		wrappers[i].style.display="none";
+         	}
+         }
+		 var id = options.id || options.url;
+		 var wrapper = document.getElementById('mui-iframe-wrapper-'+id);
+		 if (wrapper==null)
+		 { 
+		    options.styles.display='block';
+		 	createIframe(options);
+		 }else
+		 {
+		 	wrapper.style.display="block";
+		 }
+	};
 	function handleScroll(wrapper, iframe) {
 		var key = 'MUI_SCROLL_POSITION_' + document.location.href + '_' + iframe.src;
 		var scrollTop = (parseFloat(localStorage.getItem(key)) || 0);
