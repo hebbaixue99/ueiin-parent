@@ -25,7 +25,7 @@ var mui = (function(document, undefined) {
 			} else {
 				return wrap([selector], null);
 			}
-		if (typeof selector === 'function')
+		if (typeof selector === 'function') 
 			return $.ready(selector);
 		if (typeof selector === 'string') {
 			try {
