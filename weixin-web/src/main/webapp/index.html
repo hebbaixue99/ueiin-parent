@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8">
-		<title>Hello MUI</title>
+		<title>e中信微信商城</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="css/mui.min.css">
 	</head>
-
 	<body>
 		<header class="mui-bar mui-bar-nav">
-			<a class="mui-icon mui-icon-bars mui-pull-left mui-plus-visible"></a>
+			<a id="left-menu" class="mui-icon mui-icon-bars mui-pull-left mui-plus-hiddend"></a>
 			<a id="info" class="mui-icon mui-icon-info-filled mui-pull-right" style="color: #999;"></a>
-			<h1 class="mui-title">Hello mui</h1>
+			<h1 class="mui-title">e中信微信商城</h1>
 		</header>
-		<script src="js/mui.min.js"></script>
+		<script src="js/mui.js"></script>
 		<script src="js/update.js" type="text/javascript" charset="utf-8"></script>
 		<script>
+		    
 			var menu = null,
 				main = null;
 			var showMenu = false;
@@ -35,6 +34,15 @@
 					styles: {
 						top: '45px',
 						bottom: 0,
+						bounce: 'vertical'
+					}
+				},{
+					id: 'examples/setting',
+					url: 'examples/setting.html',
+					styles: {
+						top: '45px',
+						bottom: 0,
+						display:'block',
 						bounce: 'vertical'
 					}
 				}]
@@ -59,6 +67,18 @@
 						}
 					});
 				}, 200);
+			});
+			menu = mui.preload({
+				id: 'index-menu',
+				url: 'index-menu.html',
+				styles: {
+					left: 0,
+					width: '70%',
+					zindex: -1
+				},
+				show: {
+					aniShow: 'none'
+				}
 			});
 			var isInTransition = false;
 			/**
@@ -120,7 +140,24 @@
 				}
 			};
 			//点击左上角侧滑图标，打开侧滑菜单；
-			document.querySelector('.mui-icon-bars').addEventListener('tap', function(e) {
+			document.getElementById('left-menu').addEventListener('tap', function(e) {
+				//document.getElementById('list').style.display="none"; 
+				//mui("iframe")[0].style.display="none";
+				//mui("iframe")[0].src="examples/setting.html";
+				
+				mui.openSubPage(
+				{
+					id: 'tabbar',
+					url: 'examples/tabbar.html',
+					styles: {
+						top: '45px',
+						bottom: 0,
+						bounce: 'vertical'
+					}
+				});
+			});
+			
+			document.getElementById('info').addEventListener('tap',function(e) {
 				if (showMenu) {
 					closeMenu();
 				} else {
@@ -175,14 +212,14 @@
 					});
 					template.show('slide-in-right', 150);
 				}
-				//				mui.openWindow({
-				//					url:"examples/info.html",
-				//					id:"info",
-				//					show:{
-				//						aniShow:'zoom-fade-out',
-				//						duration:300
-				//					}
-				//				});
+								mui.openWindow({
+									url:"examples/info.html",
+									id:"info",
+									show:{
+										aniShow:'zoom-fade-out',
+										duration:300
+									}
+								});
 			});
 			//首页返回键处理
 			//1、若侧滑菜单显示，则关闭侧滑菜单
