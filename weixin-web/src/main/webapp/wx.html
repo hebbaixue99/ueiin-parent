@@ -11,7 +11,19 @@
 
 <link rel="stylesheet" href="./css/mui.min.css">
 <link rel="stylesheet" href="./css/index.css">
-
+ <style type="text/css">
+  	.main{width:355px; margin:0 auto; }
+  	.content{float:left; width:200px; text-align: left;}
+  	.path{margin-bottom: 40px;}
+  	.sidebar{float:right; width:150px; text-align: left; }
+  	.widget{border:1px solid #eee; margin-bottom:20px;}
+  	.widget-title{border-bottom:1px solid #eee; font-size:12px; line-height:24px; padding-left:10px;}
+  	.widget-box{padding:10px;}
+  	.content .widget{border:1px solid #eee; padding:10px; font-size:14px; text-align: left; margin-bottom: 20px; max-width:478px;}
+  	.active{background: #ddd;}
+  	.content .widget  h3{font-size:18px; line-height: 2;}
+  	.fix-top{margin-bottom: 20px;}
+  	</style>
 <style>  
  
 #top{display:block;padding:50px 0;background:#FFC;text-align:center;}  
@@ -83,28 +95,29 @@
 		</aside>
 		<!--主界面部分-->
 		<div class="mui-inner-wrap">
-			<header class="mui-bar mui-bar-nav">
+			<header id = "mui-header"  style="display:none;" class="mui-bar mui-bar-nav">
 				<a href="#offCanvasSide"
 					class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
 
 				<form action="#" method="get" class="search_form">
 					<div class="sdiv">
 						<input name="s" style="width: 80%" class="sinput"
-							placeholder="输入 回车搜索" x-webkit-speech="" type="text"> <input
-							value="搜索" style="widht: 50px" class="sbtn" type="submit">
+							placeholder="输入 回车搜索" x-webkit-speech="" type="text"> </input>
+							<input  value="搜索" style="widht: 50px" class="sbtn" type="submit"></input>
 					</div>
-					<div style="clear: both;"></div>
 				</form>
-
+				<div style="clear: both;"></div>
+                <div id = "my" style="display:none;">1</div>
 			</header>
 
-			<div id="offCanvasContentScroll"
+			<div id="offCanvasContentScroll" style="padding-top:0px;"
 				class="mui-content mui-scroll-wrapper">
 				<div class="mui-scroll">
 					<div class="mui-content-padded">
 						<div class="mui-content">
 							<div id="tabbar" class="mui-control-content mui-active">
-								<div id="slider" class="mui-slider">
+								
+								<div id="slider"    class="mui-slider">
 									<div class="mui-slider-group mui-slider-loop">
 										<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
 										<div class="mui-slider-item mui-slider-item-duplicate">
@@ -146,8 +159,7 @@
 										<div class="mui-indicator"></div>
 									</div>
 								</div>
-								 
-								<ul class="mui-table-view mui-grid-view mui-grid-9 ">
+								<ul id = "myfix" class="mui-table-view mui-grid-view mui-grid-9 ">
 									<li
 										class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
 										<a class="mui-icon-sty mui-icon-sty01" href="#"> </a>
@@ -165,6 +177,85 @@
 										<a class="mui-icon-sty mui-icon-sty15" " href="#"> </a>
 									</li>
 								</ul>
+								<div class="main">
+		<div class="path">你的位置：<span xmlns:v="http://rdf.data-vocabulary.org/#">
+        <span typeof="v:Breadcrumb"><a href="http://caibaojian.com" rel="v:url" property="v:title">前端博客</a></span>  &gt;
+                <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="http://caibaojian.com/c/front">优秀前端开发</a></span> &gt; <span typeof="v:Breadcrumb"><span class="breadcrumb_last" property="v:title"><a href="http://caibaojian.com/scrollfix">jQuery插件：滚动固定在某个位置</a></span></span>
+        </span></div>
+        <div class="content">
+			<div class="widget">
+				<h3 class="widget-title">距离顶部20像素代码：滚动到距离浮动元素的顶部20像素位置开始固定</h3>
+				<div class="widget-box">
+				<pre><code>&lt;script type="text/javascript" src="js/scrollfix.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(function(){
+var fixtop = $(".fix-top");
+fixtop.scrollFix({distanceTop:20});
+})
+&lt;/script&gt;</code></pre>
+				</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, culpa, officia, tempore, et vel earum delectus obcaecati ducimus at voluptates odio aliquid quis nulla illo veniam non dolorem molestias voluptas!</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget" id="fixFooter">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这是#fixFooter的位置</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这是距离底部300像素位置</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+		</div>
+		<div class="sidebar">
+			<div class="widget fix">
+				<h3 class="widget-title"><a href="index.html">默认滚动到这里开始固定</a></h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget active fix-top">
+				<h3 class="widget-title"><a href="index2.html">滚动到距离这里顶部20像素开始固定</a></h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, culpa, officia, tempore, et vel earum delectus obcaecati ducimus at voluptates odio aliquid quis nulla illo veniam non dolorem molestias voluptas!</div>
+			</div>
+			<div class="widget fix-startTop">
+				<h3 class="widget-title"><a href="index3.html">滚动到一个标签#startTop的头部开始固定</a></h3>
+				<div class="widget-box">Top Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, itaque, deleniti, et, odio molestias consectetur eos quisquam cumque quia consequuntur quaerat pariatur debitis soluta! Iste modi asperiores voluptatibus veniam laborum.<div id="startTop">这是#start</div></div>
+			</div>
+			<div class="widget fix-startBottom">
+				<h3 class="widget-title"><a href="index4.html">滚动到一个标签#startBottom的末端开始固定</a></h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, earum aliquid quia facere dolorum nam ipsa quae ullam ea laboriosam deleniti perferendis similique odit at ducimus rerum porro maxime aut.<div id="startBottom">这是#startBottom的末端这是#startBottom的末端这是#startBottom的末端这是#startBottom的末端 </div></div>
+			</div>
+			<div class="widget fix-bottom">
+				<h3 class="widget-title"><a href="index5.html">滚动停在底部300像素</a></h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, obcaecati, omnis eaque dolorem quam inventore ipsum dignissimos non esse doloremque qui consequatur eius fuga aspernatur facere corporis porro sit distinctio!</div>
+			</div>
+			<div class="widget fix-footer">
+				<h3 class="widget-title"><a href="index6.html">滚动停在底部#fixFooter的位置</a></h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, officia libero quia animi voluptates autem quae voluptate aut. Iusto, iste, at dolor fugiat nisi nihil ea dicta nostrum voluptates ducimus?</div>
+			</div>
+			<h3><a href="index7.html">混合例子1：距离顶部20像素，在某个标签开始固定，停靠在底部300像素位置</a></h3>
+			<h3><a href="index8.html">混合例子2：距离顶部10像素，在某个标签底部固定，停靠在底部某个标签位置</a></h3>
+		</div>
 								 
 								<div class="mui-content">
 			<div style="padding: 10px 10px;">
@@ -312,6 +403,7 @@
 			</div>
 		</div>
                                 
+	</div>
 								<div class="indexEnter">
 									<span class="type">美食天地</span>
 									<p>
@@ -322,9 +414,6 @@
 									</p>
 									<!-- <span class="dis">来到e中信，品尝世界美食</span> -->
 								</div>
-
-
-
 								<div class="indexEnter">
 									<span class="type">学富五车</span>
 									<p>
@@ -335,9 +424,6 @@
 									</p>
 									<!-- <span class="dis">知识是人类进步的阶梯</span> -->
 								</div>
-
-
-
 								<div class="indexEnter">
 									<span class="type">财源广进</span>
 									<p>
@@ -348,9 +434,6 @@
 									</p>
 									<!-- <span class="dis">福临宝地千秋盛，财进家门万事兴</span> -->
 								</div>
-
-
-
 								<div class="indexEnter">
 									<span class="type">行达四海</span>
 									<p>
@@ -361,9 +444,6 @@
 									</p>
 									<!-- <span class="dis">阳光沙滩海浪山峰峡谷瀑布不一样的风景</span> -->
 								</div>
-
-
-
 								<div class="indexEnter">
 									<span class="type">美容保健</span>
 									<p>
@@ -374,9 +454,6 @@
 									</p>
 									<!-- <span class="dis">美丽健康，从信开始</span> -->
 								</div>
-
-
-
 								<div class="indexEnter">
 									<span class="type">住福天下</span>
 									<p>
@@ -387,11 +464,9 @@
 									</p>
 									<!-- <span class="dis">为您提供家一样的感觉</span> -->
 								</div>
-
 							</div>
 							<div id="tabbar-with-chat" class="mui-control-content">
 								<div class="title">这是div模式选项卡中的第2个子页面，该页面展示一个消息列表</div>
-
 								<ul class="mui-table-view mui-table-view-chevron">
 									<li class="mui-table-view-cell"><a href=""
 										class="mui-navigate-right">Item 1</a></li>
@@ -434,7 +509,6 @@
 									<li class="mui-table-view-cell"><a href=""
 										class="mui-navigate-right">Item 20</a></li>
 								</ul>
-
 							</div>
 							<div id="tabbar-with-contact" class="mui-control-content">
 								<div class="title">这是div模式选项卡中的第3个子页面，该页面展示一个通讯录示例.</div>
@@ -549,11 +623,6 @@
 		<!-- off-canvas backdrop -->
 		<div class="mui-off-canvas-backdrop"></div>
 	</div>
-
-
-
-
-
 	<script src="./js/mui.min.js"></script>
 	<script>
 		mui.init();
@@ -561,7 +630,6 @@
 		slider.slider({
 			interval : 5000
 		});
-
 		//侧滑容器父节点
 		var offCanvasWrapper = mui('#offCanvasWrapper');
 		//主界面容器
@@ -625,7 +693,6 @@
 					function() {
 						offCanvasWrapper.offCanvas('show');
 					});*/
-
 		//设置按钮的点击事件
 		document.getElementById('setting').addEventListener('tap', function() {
 			mui.openWindow({
@@ -682,9 +749,33 @@
 		
 		
 	</script>
- 
- 
- 
+	
+	<script src="demo/js/jquery.js"></script>
+    <script type="text/javascript">
+	<!--
+	!window.jQuery && document.write('<script src=js/jquery.js><\/script>');
+	//-->
+	</script>
+	<script src="./demo/js/scrollfix.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var   fixtop = $("#myfix") ;//第一种情况
+			var fixtop2 = $(".fix-top");
+			// fix.scrollFix( 
+			//第二种情况
+			var scrollDoc =$("#offCanvasContentScroll").find(".mui-scroll");
+			var fixHeader = $("#mui-header");
+			 fixtop .scrollFix({distanceTop:20,scrollDoc:scrollDoc,fixHeader:fixHeader});
+			 fixtop2.scrollFix({distanceTop:20,scrollDoc:scrollDoc,fixHeader:fixHeader});
+			//第三种情况
+			//fixStartTop.scrollFix({startTop:"#startTop"});
+			//第四种情况
+			//fixStartBottom.scrollFix({startBottom:"#startBottom"});
+			//第五种情况
+			//fixbottom.scrollFix({endPos:300});
+			//第六种情况
+			//fixfooter.scrollFix({endPos:"#fixFooter"})
+		})
+	</script>
 </body>
-
 </html>
