@@ -6,14 +6,16 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import net.sf.json.JSONObject;
 
 @Controller
-@RequestMapping(value = "wx_index")
+@RequestMapping(value = "/wx_index")
 public class IndexController {
+	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String wxindex(HttpServletRequest req, HttpServletResponse resp,
 			Model mode, ModelMap modelMap) throws Exception {
@@ -23,9 +25,6 @@ public class IndexController {
 		JSONObject resJson = new JSONObject();
 		String param = "";
 		String test = req.getParameter("test")+"";
-		
-
-		 
 		paramJson.put("flag", "getMyIndexPic");
 		paramJson.put("params", paramsecJson);
 		param += "param=" + paramJson;
@@ -38,4 +37,9 @@ public class IndexController {
 		req.setAttribute("indexPics", resJson);
 		return "/jsp/index";
 	}
+	 @RequestMapping(value="/r/{id}",method=RequestMethod.GET)
+	    public String get(@PathVariable("id") String id){
+	        System.out.println("get"+id);
+	        return "/jsp/"+id;
+	    }
 }

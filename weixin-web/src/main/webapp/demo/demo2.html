@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery-滚动智能固定层（指定位置开始滚动）- 演示1</title>
+<style type="text/css">
+*{margin:0;padding:0;border:0;}
+body {
+    margin: 10px auto;
+    font-family: sans-serif;
+    width: 500px;
+}
+
+div {
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+#sidebarWrap {
+    height: 400px;
+    width: 210px;
+    float: right;
+    position: relative;
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    width: 270px;
+    height: 4000px;
+}
+
+#footer {
+    clear: both;
+    margin: 10px 0;
+}
+
+#sidebar {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+}
+
+#header {
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+#sidebar.fixed {
+    position: fixed;
+    top: 0;
+}
+
+
+#footer { height: 600px; }
+
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="header">header</div>
+
+<div id="sidebarWrap">
+    <div id="sidebar">Sidebar</div>
+</div>
+
+<div id="main">
+    Main
+</div>
+
+<div id="footer">
+    footer
+</div>
+
+
+
+<script>
+$(function() {
+    var top = $('#sidebar').offset().top - parseFloat($('#sidebar').css('marginTop').replace(/auto/, 0));
+    var footTop = $('#footer').offset().top - parseFloat($('#footer').css('marginTop').replace(/auto/, 0));
+
+    var maxY = footTop - $('#sidebar').outerHeight();
+
+    $(window).scroll(function(evt) {
+        var y = $(this).scrollTop();
+        if (y > top) {
+            if (y < maxY) {
+                $('#sidebar').addClass('fixed').removeAttr('style');
+            } else {
+                $('#sidebar').removeClass('fixed').css({
+                    position: 'absolute',
+                    top: (maxY - top) + 'px'
+                });
+            }
+        } else {
+            $('#sidebar').removeClass('fixed');
+        }
+    });
+});
+</script>
+
+
+
+</body>
+</html>

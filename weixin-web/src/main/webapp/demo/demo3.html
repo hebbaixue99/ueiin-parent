@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动到需要固定的地方开始固定-jquery滚动固定插件：scrollfix演示-前端博客</title>
+    <meta name="keywords" content="前端博客,代码演示" />
+  	<meta name="description" content="滚动到需要固定的地方开始固定-jquery滚动固定插件：scrollfix演示，前端博客代码演示，caibaojian.com，前端代码范例，演示代码" />
+  	<style type="text/css">
+	*{margin:0;padding:0;border:0;}
+  	.main{max-width:820px; margin:0 auto;}
+  	.content{float:left; width:500px;}
+  	.sidebar{float:right; width:300px;margin-top:40px; text-align: left;}
+  	.widget{border:1px solid #eee; margin-bottom:20px;}
+  	.widget-title{border-bottom:1px solid #eee; font-size:12px; line-height:24px; padding-left:10px;}
+  	.widget-box{padding:10px;}
+  	.content >div{border:1px solid #eee; padding:10px; font-size:14px; text-align: left; margin-bottom: 20px; max-width:478px;}
+  	.content >div:first-child{margin-top:40px;}
+  	.active{background: #ddd;}
+  	.content >div > h3{font-size:18px; line-height: 2;}
+  	</style>
+</head>
+<body>
+<!--
+/*** 原文地址：
+//	http://caibaojian.com/scrollfix
+*/
+-->
+	<div class="main">
+		<div class="path">你的位置：<span xmlns:v="http://rdf.data-vocabulary.org/#">
+        <span typeof="v:Breadcrumb"><a href="http://caibaojian.com" rel="v:url" property="v:title">前端博客</a></span>  &gt;
+                <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="http://caibaojian.com/c/front">优秀前端开发</a></span> &gt; <span typeof="v:Breadcrumb"><span class="breadcrumb_last" property="v:title"><a href="http://caibaojian.com/scrollfix">jQuery插件：滚动固定在某个位置</a></span></span>
+        </span></div>
+        <div class="content">
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, culpa, officia, tempore, et vel earum delectus obcaecati ducimus at voluptates odio aliquid quis nulla illo veniam non dolorem molestias voluptas!<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title" id="fixFooter">这是#fixFooter的位置</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这只是内容，效果看侧栏</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget">
+				<h3 class="widget-title">这是距离顶部300像素位置</h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+
+		</div>
+		<div class="sidebar">
+			<div class="widget fix">
+				<h3 class="widget-title"><a href="index.html">默认滚动到这里开始固定</a></h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, consequatur, dolorem eaque culpa ut iste tempora molestias repudiandae magni quo excepturi sapiente nisi reprehenderit omnis ea! Libero aspernatur fugit beatae?</div>
+			</div>
+			<div class="widget fix-top">
+				<h3 class="widget-title"><a href="index2.html">滚动到距离这里顶部20像素开始固定</a></h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, culpa, officia, tempore, et vel earum delectus obcaecati ducimus at voluptates odio aliquid quis nulla illo veniam non dolorem molestias voluptas!</div>
+			</div>
+			<div class="widget fix-startTop">
+				<h3 class="widget-title"><a href="index3.html">滚动到一个标签#startTop的头部开始固定</a></h3>
+				<div class="widget-box">Top Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, itaque, deleniti, et, odio molestias consectetur eos quisquam cumque quia consequuntur quaerat pariatur debitis soluta! Iste modi asperiores voluptatibus veniam laborum.<div id="startTop">这是#start</div></div>
+			</div>
+			<div class="widget fix-startBottom">
+				<h3 class="widget-title"><a href="index4.html">滚动到一个标签#startBottom的末端开始固定</a></h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, earum aliquid quia facere dolorum nam ipsa quae ullam ea laboriosam deleniti perferendis similique odit at ducimus rerum porro maxime aut.<div id="startBottom">这是#startBottom的末端这是#startBottom的末端这是#startBottom的末端这是#startBottom的末端 </div></div>
+			</div>
+			<div class="widget fix-bottom">
+				<h3 class="widget-title"><a href="index5.html">滚动停在底部300像素</a></h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, obcaecati, omnis eaque dolorem quam inventore ipsum dignissimos non esse doloremque qui consequatur eius fuga aspernatur facere corporis porro sit distinctio!</div>
+			</div>
+			<div class="widget active fix-footer">
+				<h3 class="widget-title"><a href="index6.html">滚动停在底部#fixFooter的位置</a></h3>
+				<div class="widget-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, officia libero quia animi voluptates autem quae voluptate aut. Iusto, iste, at dolor fugiat nisi nihil ea dicta nostrum voluptates ducimus?</div>
+			</div>
+		</div>
+
+	</div>
+	
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+	<!--
+	!window.jQuery && document.write('<script src=js/jquery.js><\/script>');
+	//-->
+	</script>
+
+	<!--
+	<script src="http://caibaojian.com/demo/scrollfix/js/scrollfix.js"></script>
+	-->
+	<script type="text/javascript">
+		$(function(){
+			var fix = $(".fix"), fixtop = $(".fix-top"), fixStartTop = $(".fix-startTop"), fixStartBottom = $(".fix-startBottom"), fixbottom = $(".fix-bottom"), fixfooter = $(".fix-footer");
+			//第一种情况
+			//fix.scrollFix();
+			//第二种情况
+			//fixtop.scrollFix({distanceTop:20});
+			//第三种情况
+			//fixStartTop.scrollFix({startTop:"#startTop"});
+			//第四种情况
+			//fixStartBottom.scrollFix({startBottom:"#startBottom"});
+			//第五种情况
+			//fixbottom.scrollFix({endPos:300});
+			//第六种情况
+			fixfooter.scrollFix({endPos:"#fixFooter"})
+		});
+
+
+
+
+
+
+
+
+
+
+;(function($) {
+	//URI:http://caibaojian.com/scrollfix
+	//author:caibaojian
+	//website:http://caibaojian.com
+	//descirption:scroll and fixed some div
+	$.fn.scrollFix = function(options) {
+		return this.each(function() {
+			var defaults = {
+				startTop: null, //滑到这个位置顶部时开始浮动，默认为空
+				startBottom: null, //滑到这个位置末端开始浮动，默认为空
+				distanceTop: 0, //固定在顶部的高度
+				endPos: 0 //停靠在底部的位置，可以为jquery对象
+			};
+			var opts = $.extend({},
+				defaults, options),
+				obj = $(this),
+				offset = obj.offset(),
+				offsetTop = offset.top, //对象距离顶部高度
+				offsetLeft = offset.left, //对象距离左边宽度
+				placeholder = jQuery('<div>'), //创建一个jquer对象
+				documentHeight = $(document).height(), //文档高度
+				optsTop = opts.distanceTop, //定义到顶部的高度
+				outerHeight = obj.outerHeight(), //对象高度
+				outerWidth = obj.outerWidth(), //对象外宽度
+				objWidth = obj.width(),
+				startTop = $(opts.startTop), //开始浮动固定对象
+				startBottom = $(opts.startBottom),
+				toBottom, //停止滚动位置距离底部的高度
+				ScrollHeight, //对象滚动的高度
+				endfix; //开始停止固定的位置
+			if ($.isNumeric(opts.endPos)) {
+				toBottom = opts.endPos
+			} else {
+				toBottom = parseInt(documentHeight - $(opts.endPos).offset().top);
+			}
+			ScrollHeight = parseInt(documentHeight - toBottom), endfix = parseInt(ScrollHeight - outerHeight);
+			//console.log(offsetTop);
+			$(window).scroll(function() {
+				var ScrollTop = $(window).scrollTop();
+				// console.log(start);
+				if (startTop[0]) {
+					var startTopOffset = startTop.offset(),
+						startTopPos = startTopOffset.top;
+					offsetTop = startTopPos;
+					console.log(offsetTop);
+				}
+				if (startBottom[0]) {
+					var startBottomOffset = startBottom.offset(),
+						startBottomPos = startBottomOffset.top,
+						startBottomHeight = startBottom.outerHeight();
+					offsetTop = parseInt(startBottomPos + startBottomHeight);
+				}
+				//if ('undefined' != typeof(document.body.style.maxHeight)) {
+				toTop = parseInt(offsetTop - optsTop);
+				toTop = (toTop > 0) ? toTop : 0;
+				//if(opts.startPos)
+				if ((ScrollTop > toTop) && (ScrollTop < endfix)) {
+					obj.fadeIn().css({
+						"position": "fixed",
+						"_position": "absolute",
+						"top": opts.distanceTop,
+						"_top": opts.distanceTop,
+						"width": objWidth
+					});
+					placeholder.css({
+						'height': outerHeight,
+						'_height': "0"
+					}).insertBefore(obj)
+				} else if (ScrollTop >= endfix) {
+					obj.css({
+						"position": "absolute",
+						"top": endfix,
+						"width": objWidth
+					})
+				} else {
+					obj.css({
+						"position": "static",
+						"top": ""
+					});
+					placeholder.remove()
+				}
+				//}
+			}).scroll()
+		})
+	}
+})(jQuery);
+
+</script>
+
+</body>
+</html>
