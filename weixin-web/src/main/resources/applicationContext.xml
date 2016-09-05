@@ -27,9 +27,9 @@
                 <!-- 本地开发环境配置 -->
                 <!--<value>classpath*:/application.local.properties</value>-->
                 <!-- 服务器生产环境配置 -->
-                <value>file:/var/wx/ecitic/application.serverweb.properties</value>   
+                <!-- <value>file:/var/wx/ecitic/application.serverweb.properties</value> -->   
                 <!-- <value>file:/var/wx/application.servergj.properties</value>   -->
-                <value>classpath*:/velocity.properties</value>
+                <!-- <value>classpath*:/velocity.properties</value>-->
             </list>
         </property>
     </bean>
@@ -47,12 +47,12 @@
 	
 	 
 	
-	<!-- JSR303 Validator定义 -->
- 	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+	<!-- JSR303 Validator定义
+ 	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />  -->
  	
- 	<!-- 密码加密 -->
+ 	<!-- 密码加密 
  	<bean id="passwordEncoder" class="org.acegisecurity.providers.encoding.Md5PasswordEncoder"/>
- 	<bean id="plaintextPasswordEncoder" class="org.acegisecurity.providers.encoding.PlaintextPasswordEncoder"/>
+ 	<bean id="plaintextPasswordEncoder" class="org.acegisecurity.providers.encoding.PlaintextPasswordEncoder"/>-->
  	
  	<!--文件上传-->
  	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

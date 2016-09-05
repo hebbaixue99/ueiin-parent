@@ -36,7 +36,7 @@
         <property name="minEvictableIdleTimeMillis" value="3600000" />
     </bean> 
     
-    
+    <!--
     <bean id="dataSource" class="com.ihandy.wx.dao.datasource.DataSources">  
          <property name="targetDataSources">  
              <map key-type="java.lang.String">  
@@ -44,17 +44,16 @@
                  <entry value-ref="dataSourceTest" key="ORACLE"></entry>  
             </map>  
          </property>  
-         <!-- 默认数据源 -->
+           默认数据源  
         <property name="defaultTargetDataSource" ref="mySqlDataSource"></property>  
-   </bean>
+   </bean> -->
     
 	
-	<!-- JdbcTemplate配置 -->
+	<!-- JdbcTemplate配置  <ref bean="dataSource" />  
 	<bean id="JdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<constructor-arg>
-			<ref bean="dataSource" />
 		</constructor-arg>
-	</bean> 
+	</bean> -->  
 	
 	<!-- SessionFactory -->
    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -80,11 +79,11 @@
 	  </constructor-arg>
 	 </bean>
 	
-    <!-- AOP事务管理 begin -->
+    <!-- AOP事务管理 begin 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>
-    
+    -->
     <tx:advice id="txAdvice" transaction-manager="transactionManager" >
         <tx:attributes>
             <tx:method name="get*" read-only="true" />
