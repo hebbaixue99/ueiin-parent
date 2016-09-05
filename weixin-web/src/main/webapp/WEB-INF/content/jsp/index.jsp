@@ -51,7 +51,7 @@
 				id: 'home',
 				url: 'wx_index/r/home',
 				styles: {
-					top: '45px',
+					top: '0px',
 					bottom: 0,
 					display:'block',
 					bounce: 'vertical'
@@ -60,19 +60,14 @@
 				id: 'examples/setting',
 				url: 'examples/setting.html',
 				styles: {
-					top: '45px',
+					top: '0px',
 					bottom: 0,
 					display:'none',
 					bounce: 'vertical'
 				}
 			}]
-		});
-		
-		 
-		
-		
-	</script>
-	
+		});	
+	</script>	
 	 
 </body>
 </html>

@@ -10,33 +10,15 @@
 	content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
 <link rel="stylesheet" href="static/css/mui.min.css">
 <link rel="stylesheet" href="static/css/index.css">
 </head>
 <body>
 	<!-- 底部导航开始 -->
 	<nav class="mui-bar mui-bar-tab">
-		<a id="home" class="mui-tab-item mui-active" href="#tabbar"> 
-		   <span class="mui-icon mui-icon-home"></span>
-		   <span class="mui-tab-label">首页</span>
-		</a> 
-		<a id="category" class="mui-tab-item" href="#tabbar-with-chat"> 
-		    <span class="mui-icon mui-icon-email"></span>
-			<span class="mui-tab-label">分类</span>
-		</a> 
-		<a id ="cart" class="mui-tab-item" href="#tabbar-with-contact"> 
-		    <span class="mui-icon mui-icon-contact"> 
-		        <span class="mui-badge">9</span>
-		    </span> 
-		    <span class="mui-tab-label">购物车</span>
-		</a>
-		<a id="setting" class="mui-tab-item" href="./examples/setting.html">
-			<span class="mui-icon mui-icon-gear"></span> <span
-			class="mui-tab-label">个人中心</span>
-		</a>
 	</nav>
 	<!-- 底部导航结束 -->
+	
 	<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
 	<!-- 侧滑菜单开始 -->
 		<aside id="offCanvasSide" class="mui-off-canvas-left">
@@ -157,153 +139,7 @@
 								</ul>
 					<div class="main">			 
 								 
-			<div class="mui-content">
-			<div style="padding: 10px 10px;">
-				<header>
-				<div id="segmentedControl" class="mui-segmented-control">
-					<a class="mui-control-item mui-active" href="#item1">
-				待办公文（8）
-			</a>
-					<a class="mui-control-item" href="#item2">
-				已办公文
-			</a>
-					<a class="mui-control-item" href="#item3">
-				全部公文
-			</a>
-				</div></header>
-			</div>
-			<div>
-				<div id="item1" class="mui-control-content mui-active">
-					<div id="scroll" class="mui-scroll-wrapper">
-						<div class="mui-scroll">
-							<ul class="mui-table-view">
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-1
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-2
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-3
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-4
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-5
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-6
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-7
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-8
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-9
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-10
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-11
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-12
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-13
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-14
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-15
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-16
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-17
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-18
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-19
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-20
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div id="item2" class="mui-control-content">
-					<ul class="mui-table-view">
-						<li class="mui-table-view-cell">
-							第二个选项卡子项-1
-						</li>
-						<li class="mui-table-view-cell">
-							第二个选项卡子项-2
-						</li>
-						<li class="mui-table-view-cell">
-							第二个选项卡子项-3
-						</li>
-					</ul>
-				</div>
-				<div id="item3" class="mui-control-content">
-					<ul class="mui-table-view">
-						<li class="mui-table-view-cell">
-							第三个选项卡子项-1
-						</li>
-						<li class="mui-table-view-cell">
-							第三个选项卡子项-2
-						</li>
-						<li class="mui-table-view-cell">
-							第三个选项卡子项-3
-						</li>
-					</ul>
-				</div>
-			</div>
-			<h5 class="mui-content-padded">Style</h5>
-			<div class="mui-card">
-				<form class="mui-input-group">
-					<div class="mui-input-row mui-radio">
-						<label>按钮</label>
-						<input name="style" type="radio" checked value="">
-					</div>
-					<div class="mui-input-row mui-radio">
-						<label>文字</label>
-						<input name="style" type="radio" value="inverted">
-					</div>
-				</form>
-			</div>
-			<h5 class="mui-content-padded">Color</h5>
-			<div class="mui-card">
-				<form class="mui-input-group">
-					<div class="mui-input-row mui-radio">
-						<label><span class="mui-bg-primary" style="display:block;width:25px;height:25px;"></span>
-						</label>
-						<input name="color" type="radio" checked value="primary">
-					</div>
-					<div class="mui-input-row mui-radio">
-						<label><span class="mui-bg-positive" style="display:block;width:25px;height:25px;"></span>
-						</label>
-						<input name="color" type="radio" value="positive">
-					</div>
-					<div class="mui-input-row mui-radio">
-						<label><span class="mui-bg-negative" style="display:block;width:25px;height:25px;"></span>
-						</label>
-						<input name="color" type="radio" value="negative">
-					</div>
-				</form>
-			</div>
-		</div>
-                                
-	</div>
+			 
 								<div class="indexEnter">
 									<span class="type">美食天地</span>
 									<p>
@@ -594,12 +430,12 @@
 						offCanvasWrapper.offCanvas('show');
 					});*/
 		//设置按钮的点击事件
-		document.getElementById('setting').addEventListener('tap', function() {
+		/*document.getElementById('setting').addEventListener('tap', function() {
 			mui.openWindow({
 				url : "./examples/setting.html",
 				id : "settings"
 			})
-		});
+		});*/
         /*
 		//添加列表项的点击事件
 		mui('.indexEnter').on('tap', 'a', function(e) {
