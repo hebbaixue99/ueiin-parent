@@ -200,6 +200,7 @@
 									</p>
 									<!-- <span class="dis">为您提供家一样的感觉</span> -->
 								</div>
+								<div style="width:100%;height:45px;"></div>
 							</div>
 							<div id="tabbar-with-chat" class="mui-control-content">
 								<div class="title">这是div模式选项卡中的第2个子页面，该页面展示一个消息列表</div>

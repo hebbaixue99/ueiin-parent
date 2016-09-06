@@ -44,7 +44,7 @@ public class IndexController {
 	 @RequestMapping(value="/r/{id}",method=RequestMethod.GET)
 	public String get(@PathVariable("id") String id){
 		 logger.info("-------/wx_index/r/"+id+"-------begin");
-	        System.out.println("get"+id);
+	        
 	     logger.info("-------/wx_index/r/"+id+"-------end");
 	        return "/jsp/"+id;
 	    }

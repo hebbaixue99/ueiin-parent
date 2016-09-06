@@ -10,8 +10,8 @@
 	content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
 <link rel="stylesheet" href="static/css/mui.min.css">
+<link rel="stylesheet" href="static/css/icons-extra.css">
 <link rel="stylesheet" href="static/css/index.css">
 </head>
 <body>
@@ -22,11 +22,11 @@
 		   <span class="mui-tab-label">首页</span>
 		</a> 
 		<a id="category" class="mui-tab-item" href="#tabbar-with-chat"> 
-		    <span class="mui-icon mui-icon-email"></span>
+		    <span class="mui-icon mui-icon-list"></span>
 			<span class="mui-tab-label">分类</span>
 		</a> 
 		<a id ="cart" class="mui-tab-item" href="#tabbar-with-contact"> 
-		    <span class="mui-icon mui-icon-contact"> 
+		    <span class="mui-icon-extra mui-icon-extra-cart"> 
 		        <span class="mui-badge">9</span>
 		    </span> 
 		    <span class="mui-tab-label">购物车</span>
@@ -67,7 +67,6 @@
 				}
 			}]
 		});	
-	</script>	
-	 
+	</script>		 
 </body>
 </html>
